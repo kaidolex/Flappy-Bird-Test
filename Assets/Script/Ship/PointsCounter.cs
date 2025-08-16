@@ -25,15 +25,17 @@ public class PointsCounter : MonoBehaviour
     public void AddPoints(int points)
     {
         this.points += points;
-        OnPointsChanged?.Invoke(points, bestPoints);
+
+        SetBestPoints();
+
+        OnPointsChanged?.Invoke(this.points, this.bestPoints);
     }
 
-    public void SetBestPoints(int points)
+    public void SetBestPoints()
     {
-        if (points <= bestPoints) return;
+        if (points < bestPoints) return;
 
         bestPoints = points;
-        OnPointsChanged?.Invoke(points, bestPoints);
     }
 
     public void StopCounting()
@@ -47,6 +49,5 @@ public class PointsCounter : MonoBehaviour
         if (!collision.gameObject.CompareTag("Asteroid")) return;
 
         AddPoints(1);
-        SetBestPoints(points);
     }
 }
