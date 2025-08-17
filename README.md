@@ -89,7 +89,6 @@ Assets/
 1. **Open in Unity**: Load the project in Unity 6000.1.13f1 or compatible version
 2. **Scene Setup**: Open the Game scene first
 3. **Play**: Hit the play button and click "Play" button to begin
-4. **Build**: Use the included Web build profile for browser deployment
 
 ## Game Flow
 
@@ -97,14 +96,6 @@ Assets/
 3. **Active Gameplay**: Navigate spaceship through asteroid field
 4. **Collision/Death**: Game over state with restart option
 5. **Restart**: Reset all systems and return to active gameplay
-
-## Technical Highlights
-
-- **Universal Render Pipeline (URP)**: Modern rendering with 2D lighting
-- **Input System**: Modern Unity input handling
-- **TextMeshPro**: High-quality text rendering
-- **Modular Architecture**: Easy to extend and modify
-- **Performance Optimized**: Efficient spawning and cleanup systems
 
 ## Credits
 
