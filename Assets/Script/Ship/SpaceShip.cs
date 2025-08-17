@@ -127,10 +127,6 @@ public class SpaceShip : MonoBehaviour, IDamageable
     
     void UpdateAnimDelta(float currentRotation)
     {
-        // Map rotation to animDelta:
-        // maxUpRotation (30°) -> animDelta = 1
-        // 0° -> animDelta = 0  
-        // maxDownRotation (-30°) -> animDelta = -1
         
         if (currentRotation >= 0)
         {
@@ -156,14 +152,12 @@ public class SpaceShip : MonoBehaviour, IDamageable
         rb.gravityScale = currentGravityScale;
         
         // Reset vertical velocity to zero before applying flap force
-        // This ensures consistent flap behavior regardless of current velocity
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         
         // Apply upward force to make the bird flap
         rb.AddForce(Vector2.up * flapForce, ForceMode2D.Impulse);
     }
     
-    // Method to handle bird death (can be called from collision detection)
     public void Die()
     {
         isDead = true;

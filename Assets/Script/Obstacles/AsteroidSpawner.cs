@@ -25,10 +25,8 @@ public class AsteroidSpawner : MonoBehaviour
 
     void Initialize()
     {
-        // Get the BoxCollider2D component
         boxCollider = GetComponent<BoxCollider2D>();
         
-        // Start spawning after the initial delay
         StartSpawning();
         StopSpawning();
     }
